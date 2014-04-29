@@ -9,7 +9,12 @@ import java.util.*;
  * @author Edward Sciore
  */
 /**
+<<<<<<< HEAD
  * @author sciore 
+=======
+ * @author sciore
+ *
+>>>>>>> 5712dc26842fedf189c49134eb0801334dfdd73a
  */
 public class SortScan implements Scan {
    private UpdateScan s1, s2=null, currentscan=null;
@@ -34,11 +39,14 @@ public class SortScan implements Scan {
       }
    }
    
+<<<<<<< HEAD
    public TempTable getTempTable()
    {
 	   return (TempTable) s1;
    }
    
+=======
+>>>>>>> 5712dc26842fedf189c49134eb0801334dfdd73a
    /**
     * Positions the scan before the first record in sorted order.
     * Internally, it moves to the first record of each underlying scan.
@@ -151,6 +159,9 @@ public class SortScan implements Scan {
       if (rid2 != null)
          s2.moveToRid(rid2);
    }
+<<<<<<< HEAD
    
    
+=======
+>>>>>>> 5712dc26842fedf189c49134eb0801334dfdd73a
 }

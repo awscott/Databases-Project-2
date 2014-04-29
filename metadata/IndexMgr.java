@@ -23,7 +23,9 @@ public class IndexMgr {
    public IndexMgr(boolean isnew, TableMgr tblmgr, Transaction tx) {
       if (isnew) {
          Schema sch = new Schema();
+
         sch.addStringField("indextype", MAX_NAME);
+
          sch.addStringField("indexname", MAX_NAME);
          sch.addStringField("tablename", MAX_NAME);
          sch.addStringField("fieldname", MAX_NAME);
@@ -41,10 +43,12 @@ public class IndexMgr {
     * @param fldname the name of the indexed field
     * @param tx the calling transaction
     */
+
    public void createIndex(String idtype, String idxname, String tblname, String fldname, Transaction tx) {
       RecordFile rf = new RecordFile(ti, tx);
       rf.insert();
       rf.setString("indextype", idtype);
+
       rf.setString("indexname", idxname);
       rf.setString("tablename", tblname);
       rf.setString("fieldname", fldname);
@@ -65,8 +69,10 @@ public class IndexMgr {
          if (rf.getString("tablename").equals(tblname)) {
          String idxname = rf.getString("indexname");
          String fldname = rf.getString("fieldname");
+
          String idtype = rf.getString("indextype");
          IndexInfo ii = new IndexInfo(idtype, idxname, tblname, fldname, tx);
+
          result.put(fldname, ii);
       }
       rf.close();

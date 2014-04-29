@@ -72,7 +72,11 @@ public class Task1
 				String DName = rsa.getString("DName");
 				int DId = rsa.getInt("DAge");
 				System.out.print("" +
+<<<<<<< HEAD
 						"Name: "+DName+" Age: "+DId+"\n");
+=======
+						"Name: "+DName+" Age: "+DId+"");
+>>>>>>> 5712dc26842fedf189c49134eb0801334dfdd73a
 			}
 			
 			rsa.close();

@@ -13,8 +13,11 @@ public class TableInfo {
    private Map<String,Integer> offsets;
    private int recordlen;
    private String tblname;
+<<<<<<< HEAD
    private boolean sorted; // edited here
    private String sortedBy;
+=======
+>>>>>>> 5712dc26842fedf189c49134eb0801334dfdd73a
    
    /**
     * Creates a TableInfo object, given a table name
@@ -27,8 +30,11 @@ public class TableInfo {
    public TableInfo(String tblname, Schema schema) {
       this.schema = schema;
       this.tblname = tblname;
+<<<<<<< HEAD
       this.sorted = false;
       this.sortedBy = null;
+=======
+>>>>>>> 5712dc26842fedf189c49134eb0801334dfdd73a
       offsets  = new HashMap<String,Integer>();
       int pos = 0;
       for (String fldname : schema.fields()) {

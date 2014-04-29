@@ -13,8 +13,11 @@ public class MergeJoinPlan implements Plan {
    private Plan p1, p2;
    private String fldname1, fldname2;
    private Schema sch = new Schema();
+<<<<<<< HEAD
    private TempTable tt1, tt2;
    private TableInfo ti1, ti2;
+=======
+>>>>>>> 5712dc26842fedf189c49134eb0801334dfdd73a
    
    /**
     * Creates a mergejoin plan for the two specified queries.
@@ -47,8 +50,11 @@ public class MergeJoinPlan implements Plan {
    public Scan open() {
       Scan s1 = p1.open();
       SortScan s2 = (SortScan) p2.open();
+<<<<<<< HEAD
       
       
+=======
+>>>>>>> 5712dc26842fedf189c49134eb0801334dfdd73a
       return new MergeJoinScan(s1, s2, fldname1, fldname2);
    }
    
