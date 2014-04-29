@@ -110,6 +110,7 @@ public class MergeJoinScan implements Scan {
       if (s1.hasField(fldname))
          return s1.getInt(fldname);
       else
+    	  
          return s2.getInt(fldname);
    }
    

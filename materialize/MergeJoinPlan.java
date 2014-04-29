@@ -48,13 +48,6 @@ public class MergeJoinPlan implements Plan {
       Scan s1 = p1.open();
       SortScan s2 = (SortScan) p2.open();
       
-      tt1 = ((SortScan) s1).getTempTable();
-      tt2 = s2.getTempTable();
-      
-      ti1 = tt1.getTableInfo();
-      ti2 = tt2.getTableInfo();
-      
-      fuck();
       
       return new MergeJoinScan(s1, s2, fldname1, fldname2);
    }
