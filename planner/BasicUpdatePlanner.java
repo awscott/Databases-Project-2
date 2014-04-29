@@ -63,6 +63,7 @@ public class BasicUpdatePlanner implements UpdatePlanner {
    }
    public int executeCreateIndex(CreateIndexData data, Transaction tx) {
       SimpleDB.mdMgr().createIndex(data.indexType(), data.indexName(), data.tableName(), data.fieldName(), tx);
+
       return 0;  
    }
 }

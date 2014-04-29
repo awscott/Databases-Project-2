@@ -1,8 +1,10 @@
 package simpledb.index.planner;
 
+
 import java.sql.Connection;
 import java.sql.Driver;
 import java.sql.Statement;
+
 import java.util.Iterator;
 import java.util.Map;
 
@@ -45,9 +47,9 @@ public class IndexUpdatePlanner implements UpdatePlanner {
       s.insert();
       RID rid = s.getRid();
       
-      // then modify each field, inserting an index record if appropriate
-      
+      // then modify each field, inserting an index record if appropriate      
       indexes = SimpleDB.mdMgr().getIndexInfo(tblname, tx);
+
       Iterator<Constant> valIter = data.vals().iterator();
       for (String fldname : data.fields()) {
          Constant val = valIter.next();

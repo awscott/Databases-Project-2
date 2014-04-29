@@ -5,6 +5,8 @@ import simpledb.tx.Transaction;
 import simpledb.record.*;
 import java.util.*;
 
+//THIS FILE HAS BEEN EDITED
+
 /**
  * The index manager.
  * The index manager has similar functionalty to the table manager.
@@ -41,6 +43,7 @@ public class IndexMgr {
     * @param fldname the name of the indexed field
     * @param tx the calling transaction
     */
+
    public void createIndex(String idtype, String idxname, String tblname, String fldname, Transaction tx) {
       RecordFile rf = new RecordFile(ti, tx);
       rf.insert();

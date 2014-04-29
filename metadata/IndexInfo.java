@@ -9,7 +9,9 @@ import simpledb.index.Index;
 import simpledb.index.hash.HashIndex; 
 import simpledb.index.btree.BTreeIndex; //in case we change to btree indexing
 
+
 // change so it can handle an index type
+
 /**
  * The information about an index.
  * This information is used by the query planner in order to
@@ -32,6 +34,7 @@ public class IndexInfo {
     * @param fldname the name of the indexed field
     * @param tx the calling transaction
     */
+
    public IndexInfo(String indexType, String idxname, String tblname, String fldname,
                     Transaction tx) {
 	  this.indexType = indexType;
@@ -64,8 +67,6 @@ public class IndexInfo {
       {
     	  return new HashIndex(idxname, sch, tx);
       }
-      
-      
       return new HashIndex(idxname, sch, tx);
    }
    

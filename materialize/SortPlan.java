@@ -15,7 +15,10 @@ public class SortPlan implements Plan {
    private Transaction tx;
    private Schema sch;
    private RecordComparator comp;
+<<<<<<< HEAD
    private boolean sorted;
+=======
+>>>>>>> 5712dc26842fedf189c49134eb0801334dfdd73a
    
    /**
     * Creates a sort plan for the specified query.
@@ -28,7 +31,10 @@ public class SortPlan implements Plan {
       this.tx = tx;
       sch = p.schema();
       comp = new RecordComparator(sortfields);
+<<<<<<< HEAD
       this.sorted = false;
+=======
+>>>>>>> 5712dc26842fedf189c49134eb0801334dfdd73a
    }
    
    /**
@@ -41,6 +47,7 @@ public class SortPlan implements Plan {
       Scan src = p.open();
       List<TempTable> runs = splitIntoRuns(src);
       src.close();
+<<<<<<< HEAD
       
       if(!sorted)
       {
@@ -50,6 +57,11 @@ public class SortPlan implements Plan {
     	  sorted = true;
       }
       return new SortScan(runs, comp);//runs is 2 or 1 temporary
+=======
+      while (runs.size() > 2)
+         runs = doAMergeIteration(runs);
+      return new SortScan(runs, comp);
+>>>>>>> 5712dc26842fedf189c49134eb0801334dfdd73a
    }
    
    /**
