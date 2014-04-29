@@ -64,7 +64,7 @@ public class IndexInfo {
       
       if (indexType == "bt") // b-tree
       {
-    	  return new HashIndex(idxname, sch, tx);
+    	  return new BTreeIndex(idxname, sch, tx);
       }
       
       if (indexType == "eh") //extensible hash
